@@ -7,6 +7,12 @@ import { downloadTemplate } from 'giget';
 import path from 'path';
 import fs from 'fs';
 import readline from 'readline';
+import { fileURLToPath } from 'url';
+
+// Get package.json for version
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf-8'));
 
 // ============================================================================
 // CONSTANTS
@@ -158,6 +164,11 @@ const initCommand = async (options) => {
 
         spinner.text = 'Installing...';
 
+        // Delete old .agent folder if exists (always clean install)
+        if (fs.existsSync(agentDir)) {
+            fs.rmSync(agentDir, { recursive: true, force: true });
+        }
+
         // Copy .agent folder
         copyAgentFolder(tempDir, agentDir);
 
@@ -249,7 +260,7 @@ const program = new Command();
 program
     .name('ag-kit')
     .description('CLI tool to install and manage Antigravity Kit')
-    .version('1.0.0', '-v, --version', 'Display version number');
+    .version(pkg.version, '-v, --version', 'Display version number');
 
 // Command: init
 program
