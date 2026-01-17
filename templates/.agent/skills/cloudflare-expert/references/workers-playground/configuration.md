@@ -1,3 +1,0 @@
-# Configuration
-
-See main documentation.

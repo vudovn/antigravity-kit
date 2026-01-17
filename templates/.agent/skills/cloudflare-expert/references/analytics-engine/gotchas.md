@@ -1,3 +1,0 @@
-# Gotchas
-
-See main documentation.

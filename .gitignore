@@ -1,6 +1,3 @@
-node_modules
-.git
-.env
-.DS_Store
-/.agent
-/base-source
+# Ignore
+node_modules/
+.temp_ag_kit/

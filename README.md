@@ -1,343 +1,115 @@
-# 🚀 Antigravity Kit
+# Antigravity Kit
 
-> **AI Agent Capability Expansion Toolkit** - A comprehensive collection of skills, rules, and workflows to supercharge AI coding assistants.
+> **Version 2.0** - AI Agent templates with Skills, Agents, and Workflows
 
-[![Skills](https://img.shields.io/badge/Skills-41-blue)](#-skills-41)
-[![Agents](https://img.shields.io/badge/Agents-16-green)](#-agents-16)
-[![Workflows](https://img.shields.io/badge/Workflows-11-orange)](#-workflows-11)
-
----
-
-## 📋 Table of Contents
-
-- [Introduction](#-introduction)
-- [Skills](#-skills)
-- [Rules](#-rules)
-- [Workflows](#-workflows)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Credits](#-credits)
-- [Contributing](#-contributing)
-
----
-
-## 🎯 Introduction
-
-**Antigravity Kit** is a comprehensive collection of:
-
-- **Skills** - Domain-specific expertise (React, Node.js, Database, Testing, UI/UX...)
-- **Rules** - Guidelines and constraints for agent behavior
-- **Workflows** - Step-by-step procedures for common tasks
-
-This toolkit combines the best of:
-- 🎨 **[UI UX Pro Max](https://ui-ux-pro-max-skill.nextlevelbuilder.io/)** - Design Intelligence with 50 styles, 21 palettes, 50 font pairings
-- 🛠️ **[ClaudeKit](https://claudekit.cc/)** - Production-ready AI subagents, workflows, and integrations
-
-Designed to integrate with AI agents supporting the **Agent Skills** standard.
-
----
-
-## 🧠 Skills (41)
-
-Skills are domain-specific expertise modules. The agent automatically identifies and uses the appropriate skill for each task.
-
-### Frontend & UI
-
-| Skill | Description |
-|-------|-------------|
-| `react-patterns` | React hooks, state, performance |
-| `nextjs-best-practices` | App Router, Server Components |
-| `vue-expert` | Vue 3, Composition API, Pinia |
-| `frontend-design` | UI/UX patterns, design systems |
-| `tailwind-patterns` | Tailwind CSS utilities |
-| `ui-ux-pro-max` | 50 styles, 21 palettes, 50 fonts |
-
-### Backend & API
-
-| Skill | Description |
-|-------|-------------|
-| `api-patterns` | REST, GraphQL, HTTP semantics |
-| `nestjs-expert` | NestJS modules, DI, decorators |
-| `nodejs-best-practices` | Node.js async, modules |
-| `python-patterns` | Python standards, FastAPI |
-
-### Database
-
-| Skill | Description |
-|-------|-------------|
-| `database-design` | Schema design, optimization |
-| `prisma-expert` | Prisma ORM, migrations |
-
-### Testing & Quality
-
-| Skill | Description |
-|-------|-------------|
-| `testing-patterns` | Jest, Vitest, test strategies |
-| `webapp-testing` | E2E testing, Playwright |
-| `tdd-workflow` | Test-driven development |
-| `code-review-checklist` | Code review standards |
-| `lint-and-validate` | Linting, validation |
-| `typescript-expert` | TypeScript patterns |
-
-### DevOps & Infrastructure
-
-| Skill | Description |
-|-------|-------------|
-| `deployment-procedures` | CI/CD, deploy workflows |
-| `docker-expert` | Containerization, Compose |
-| `server-management` | Infrastructure management |
-| `bash-linux` | Linux commands, shell scripts |
-| `powershell-windows` | Windows PowerShell |
-
-### Security
-
-| Skill | Description |
-|-------|-------------|
-| `vulnerability-scanner` | Security auditing |
-| `red-team-tactics` | Offensive security |
-
-### Architecture & Planning
-
-| Skill | Description |
-|-------|-------------|
-| `app-builder` | Full-stack app scaffolding |
-| `architecture` | System design patterns |
-| `plan-writing` | Task planning, breakdown |
-| `brainstorming` | Socratic questioning |
-
-### Specialized
-
-| Skill | Description |
-|-------|-------------|
-| `mobile-design` | Mobile UI/UX patterns |
-| `game-development` | Game logic, mechanics |
-| `performance-profiling` | Web Vitals, optimization |
-| `seo-fundamentals` | SEO, visibility |
-| `i18n-localization` | Internationalization |
-| `geo-fundamentals` | GenAI optimization |
-| `mcp-builder` | Model Context Protocol |
-| `parallel-agents` | Multi-agent patterns |
-| `behavioral-modes` | Agent personas |
-| `systematic-debugging` | Troubleshooting |
-| `documentation-templates` | Doc formats |
-| `clean-code` | Coding standards |
-
----
-
-## 🤖 Agents (16)
-
-Specialized AI agents for different domains:
-
-| Agent | Focus |
-|-------|-------|
-| `orchestrator` | Multi-agent coordination |
-| `project-planner` | Discovery, task planning |
-| `frontend-specialist` | Web UI/UX |
-| `backend-specialist` | API, business logic |
-| `database-architect` | Schema, SQL |
-| `mobile-developer` | iOS, Android |
-| `game-developer` | Game logic |
-| `devops-engineer` | CI/CD, Docker |
-| `security-auditor` | Security compliance |
-| `penetration-tester` | Offensive security |
-| `test-engineer` | Testing strategies |
-| `debugger` | Root cause analysis |
-| `performance-optimizer` | Speed, Vitals |
-| `seo-specialist` | Ranking, visibility |
-| `documentation-writer` | Manuals, docs |
-| `explorer-agent` | Codebase analysis |
-
----
-
-## 🔄 Workflows (11)
-
-Workflows are step-by-step procedures. Invoke with slash command.
-
-| Command | Description |
-|---------|-------------|
-| `/brainstorm` | Socratic discovery |
-| `/create` | Create new features |
-| `/debug` | Debug issues |
-| `/deploy` | Deploy application |
-| `/enhance` | Improve existing code |
-| `/orchestrate` | Multi-agent coordination |
-| `/plan` | Task breakdown |
-| `/preview` | Preview changes |
-| `/status` | Check project status |
-| `/test` | Run tests |
-| `/ui-ux-pro-max` | Design with 50 styles |
-
----
-
-## 📦 Installation
-
-### Install Global (Recommended)
+## Quick Install
 
 ```bash
-# Install globally
-npm install -g @vudovn/antigravity-kit
+npx @vudovn/ag-kit init
+```
 
-# Then use commands anywhere
-# Navigate to your project
-cd your-project
+Or install globally:
 
-# Install .agent folder
+```bash
+npm install -g @vudovn/ag-kit
 ag-kit init
-
-# Update to the latest version
-ag-kit update
-
-# Check installation status
-ag-kit status
 ```
 
-### Using npx (No Install)
+This installs the `.agent` folder containing all templates into your project.
 
-```bash
-# Navigate to your project
-cd your-project
+## What's Included
 
-# Install .agent folder
-npx @vudovn/antigravity-kit init
-```
+| Component | Count | Description |
+|-----------|-------|-------------|
+| **Agents** | 16 | Specialist AI personas (frontend, backend, security, etc.) |
+| **Skills** | 40 | Domain-specific knowledge modules |
+| **Workflows** | 11 | Slash command procedures |
 
-### CLI Commands
-
-| Command | Description |
-|---------|-------------|
-| `ag-kit init` | Install `.agent` folder into current directory |
-| `ag-kit update` | Update `.agent` to the latest version |
-| `ag-kit status` | Check installation status |
-
-#### Command Options
-
-```bash
-# init options
-ag-kit init [options]
-  -f, --force           # Overwrite if folder already exists
-  -p, --path <dir>      # Path to the project directory
-  -b, --branch <name>   # Select repository branch
-
-# update options
-ag-kit update [options]
-  -f, --force           # Skip confirmation prompt
-  -p, --path <dir>      # Path to the project directory
-  -b, --branch <name>   # Select repository branch
-
-# status options
-ag-kit status [options]
-  -p, --path <dir>      # Path to the project directory
-```
-
----
-
-## 🚀 Usage
-
-### Skills
-
-Skills are automatically applied. The agent reads the skill when it identifies a related task:
+## Structure
 
 ```
-User: "Fix bug in this React component"
-Agent: (automatically uses react-expert skill)
+.agent/
+├── agents/          # 16 Specialist Agents
+├── skills/          # 40 Skills
+├── workflows/       # 11 Slash Commands
+├── rules/           # Workspace Rules
+└── ARCHITECTURE.md  # Full documentation
 ```
 
-### Rules
+## Usage
 
-Rules apply based on activation type:
-- **always_on**: Always active
-- **model_decision**: Agent decides when to apply
-- **glob**: Applied when working with files matching pattern
+### Using Agents
 
-### Workflows
+Mention an agent by name to invoke specialized expertise:
+
+```
+Use the security-auditor agent to review authentication
+Use the frontend-specialist to analyze React components
+```
+
+### Using Skills
+
+Skills are loaded automatically based on task context. The AI reads skill descriptions and applies relevant knowledge.
+
+### Using Workflows
 
 Invoke workflows with slash commands:
 
+| Command | Description |
+|---------|-------------|
+| `/brainstorm` | Explore options before implementation |
+| `/create` | Create new features or apps |
+| `/debug` | Systematic debugging |
+| `/deploy` | Deploy application |
+| `/enhance` | Improve existing code |
+| `/orchestrate` | Multi-agent coordination |
+| `/plan` | Create task breakdown |
+| `/preview` | Preview changes locally |
+| `/status` | Check project status |
+| `/test` | Generate and run tests |
+| `/ui-ux-pro-max` | Design with 50 styles |
+
+Example:
 ```
-User: Prompt
-Agent: (follows the workflow)
-```
-
----
-
-## 🙏 Credits
-
-This project is built upon and inspired by:
-
-| Project | Description | Link |
-|---------|-------------|------|
-| **UI UX Pro Max** | Design Intelligence for Claude Code - 50 styles, 21 color palettes, 50 font pairings, 20 chart types | [ui-ux-pro-max-skill.nextlevelbuilder.io](https://ui-ux-pro-max-skill.nextlevelbuilder.io/) |
-| **ClaudeKit** | Production-ready AI subagents, workflows, and integrations for software development | [claudekit.cc](https://claudekit.cc/) |
-
-Special thanks to the creators of these amazing tools for making AI-assisted development more powerful and accessible.
-
----
-
-## 🤝 Contributing
-
-### Adding a New Skill
-
-1. Create folder: `.agent/skills/your-skill/`
-2. Create `SKILL.md` with format:
-
-```markdown
----
-name: your-skill
-description: Skill description. Use when X or Y.
----
-
-# Your Skill
-
-Instructions for the agent...
+/brainstorm authentication system
+/create landing page with hero section
+/debug why login fails
 ```
 
-### Adding a New Rule
+### Using Rules
 
-1. Create file: `.agent/rules/your-rule.md`
-2. Add frontmatter:
+Rules in `.agent/rules/` are automatically applied. The main configuration file is `GEMINI.md`.
 
-```markdown
----
-activation: always_on | model_decision | glob
-glob: "**/*.tsx"  # if using glob
-description: When to apply  # if using model_decision
----
+## CLI Tool
 
-# Your Rule
+| Command | Description |
+|---------|-------------|
+| `ag-kit init` | Install `.agent` folder into your project |
+| `ag-kit update` | Update to the latest version |
+| `ag-kit status` | Check installation status |
 
-Content...
+### Options
+
+```bash
+ag-kit init --force        # Overwrite existing .agent folder
+ag-kit init --path ./myapp # Install in specific directory
+ag-kit init --branch dev   # Use specific branch
+ag-kit init --quiet        # Suppress output (for CI/CD)
+ag-kit init --dry-run      # Preview actions without executing
 ```
 
-### Adding a New Workflow
+## Documentation
 
-1. Create file: `.agent/workflows/your-workflow.md`
-2. Format:
+See [ARCHITECTURE.md](.agent/ARCHITECTURE.md) for full documentation on agents, skills, and workflows.
 
-```markdown
----
-description: Workflow description
----
-
-# Your Workflow
-
-## Step 1: ...
-## Step 2: ...
-```
-
----
-
-## 📄 License
-
-MIT License - See [LICENSE](LICENSE) for details.
-
----
-
-<p align="center">
-  Made with ❤️ by <a href="https://github.com/vudovn">VudoVN</a>
-</p>
+## Buy me coffee
 
 <p align="center">
   <a href="https://buymeacoffee.com/vudovn">
     <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee" />
   </a>
 </p>
+
+## License
+
+MIT © Vudovn
