@@ -233,6 +233,24 @@ When user's prompt is NOT in English:
 | `plan-writing` | {task-slug}.md format |
 | `threejs-mastery` | 2025 3D Web (R3F, WebGPU) |
 | `behavioral-modes` | Mode switching |
+| `convex-patterns` | Convex backend (queries, mutations, real-time) |
+
+### 🛠️ Personal Tech Stack Preferences
+
+> Default to these technologies unless user specifies otherwise.
+
+| Layer | Preferred | Notes |
+|-------|-----------|-------|
+| **Database/Backend** | Convex | Real-time, serverless, TypeScript-native |
+| **UI Components** | shadcn/ui | Tailwind-based, accessible, customizable |
+| **Styling** | Tailwind CSS v4 | CSS variables theming |
+| **Auth** | Clerk or Auth.js | Integrated with Convex |
+| **ORM** | N/A | Convex has built-in data layer |
+
+**When to deviate:**
+- User explicitly requests different stack
+- Project has existing infrastructure (Django, Rails, etc.)
+- Offline-first requirements (use SQLite/PouchDB)
 
 ### Script Locations
 

@@ -393,4 +393,51 @@ For deeper guidance on specific areas:
 
 ---
 
+## 🧩 Preferred Component Library: shadcn/ui
+
+> For React/Next.js projects, **shadcn/ui** is the preferred component library.
+
+### Why shadcn/ui
+
+| Benefit | Description |
+|---------|-------------|
+| **Ownership** | Components copied to your codebase, fully customizable |
+| **Tailwind Native** | Built on Tailwind CSS, perfect theming integration |
+| **Accessible** | Built on Radix UI primitives (WCAG compliant) |
+| **Minimal Bundle** | Only include what you use |
+
+### Quick Setup
+
+```bash
+# Initialize (creates components.json)
+npx shadcn@latest init
+
+# Add components
+npx shadcn@latest add button card dialog form
+```
+
+### Theming with CSS Variables
+
+```css
+/* globals.css */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+}
+```
+
+### Reference
+- [shadcn/ui docs](https://ui.shadcn.com)
+- Stack flag: `--stack shadcn` in `ui-ux-pro-max`
+
+---
+
 > **Remember:** Design is THINKING, not copying. Every project deserves fresh consideration based on its unique context and users. **Avoid the Modern SaaS Safe Harbor!**

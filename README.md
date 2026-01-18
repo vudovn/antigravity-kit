@@ -1,21 +1,8 @@
-# Antigravity Kit
+# Antigravity Kit (Private Fork)
 
 > **Version 2.0** - AI Agent templates with Skills, Agents, and Workflows
 
-## Quick Install
-
-```bash
-npx @vudovn/ag-kit init
-```
-
-Or install globally:
-
-```bash
-npm install -g @vudovn/ag-kit
-ag-kit init
-```
-
-This installs the `.agent` folder containing all templates into your project.
+This is a private fork for personal use. Not intended for public distribution.
 
 ## What's Included
 
@@ -80,36 +67,10 @@ Example:
 
 Rules in `.agent/rules/` are automatically applied. The main configuration file is `GEMINI.md`.
 
-## CLI Tool
-
-| Command | Description |
-|---------|-------------|
-| `ag-kit init` | Install `.agent` folder into your project |
-| `ag-kit update` | Update to the latest version |
-| `ag-kit status` | Check installation status |
-
-### Options
-
-```bash
-ag-kit init --force        # Overwrite existing .agent folder
-ag-kit init --path ./myapp # Install in specific directory
-ag-kit init --branch dev   # Use specific branch
-ag-kit init --quiet        # Suppress output (for CI/CD)
-ag-kit init --dry-run      # Preview actions without executing
-```
-
 ## Documentation
 
 See [ARCHITECTURE.md](.agent/ARCHITECTURE.md) for full documentation on agents, skills, and workflows.
 
-## Buy me coffee
-
-<p align="center">
-  <a href="https://buymeacoffee.com/vudovn">
-    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee" />
-  </a>
-</p>
-
 ## License
 
-MIT © Vudovn
+MIT - Originally by [Vudovn](https://github.com/vudovn)
