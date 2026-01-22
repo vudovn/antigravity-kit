@@ -1,4 +1,5 @@
 # Antigravity Kit
+>
 > AI Agent templates with Skills, Agents, and Workflows
 
 <div  align="center">
@@ -52,6 +53,38 @@ Use the security-auditor agent to review authentication
 Use the frontend-specialist to analyze React components
 ```
 
+### ✨ NEW: Intelligent Routing (Auto Agent Selection)
+
+**No need to mention agents explicitly!** The system automatically detects and applies the right specialist(s):
+
+```
+You: "Add JWT authentication"
+AI: 🤖 Applying @security-auditor + @backend-specialist...
+
+You: "Fix the dark mode button"
+AI: 🤖 Using @frontend-specialist...
+
+You: "Login returns 500 error"
+AI: 🤖 Using @debugger for systematic analysis...
+```
+
+**How it works:**
+
+- Analyzes your request silently
+- Detects domain(s) automatically (frontend, backend, security, etc.)
+- Selects the best specialist(s)
+- Informs you which expertise is being applied
+- You get specialist-level responses without needing to know the system architecture
+
+**Benefits:**
+
+- ✅ Zero learning curve - just describe what you need
+- ✅ Always get expert responses
+- ✅ Transparent - shows which agent is being used
+- ✅ Can still override by mentioning agent explicitly
+
+📖 **Learn more:** [Intelligent Routing Guide](.agent/docs/intelligent-routing-guide.md)
+
 ### Using Skills
 
 Skills are loaded automatically based on task context. The AI reads skill descriptions and applies relevant knowledge.
@@ -75,6 +108,7 @@ Invoke workflows with slash commands:
 | `/ui-ux-pro-max` | Design with 50 styles |
 
 Example:
+
 ```
 /brainstorm authentication system
 /create landing page with hero section

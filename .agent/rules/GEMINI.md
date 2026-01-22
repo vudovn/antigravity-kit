@@ -13,6 +13,7 @@ trigger: always_on
 > **MANDATORY:** You MUST read the appropriate agent file and its skills BEFORE performing any implementation. This is the highest priority rule.
 
 ### 1. Modular Skill Loading Protocol
+
 ```
 Agent activated → Check frontmatter "skills:" field
     │
@@ -26,6 +27,7 @@ Agent activated → Check frontmatter "skills:" field
 - **Rule Priority:** P0 (GEMINI.md) > P1 (Agent .md) > P2 (SKILL.md). All rules are binding.
 
 ### 2. Enforcement Protocol
+
 1. **When agent is activated:**
    - ✅ READ all rules inside the agent file.
    - ✅ CHECK frontmatter `skills:` list.
@@ -50,11 +52,43 @@ Agent activated → Check frontmatter "skills:" field
 
 ---
 
+## 🤖 INTELLIGENT AGENT ROUTING (STEP 3 - AUTO)
+
+**ALWAYS ACTIVE: Before responding to ANY request, automatically analyze and select the best agent(s).**
+
+> 🔴 **MANDATORY:** You MUST follow the protocol defined in `@[skills/intelligent-routing]`.
+
+### Auto-Selection Protocol
+
+1. **Analyze (Silent)**: Detect domains (Frontend, Backend, Security, etc.) from user request.
+2. **Select Agent(s)**: Choose the most appropriate specialist(s).
+3. **Inform User**: Concisely state which expertise is being applied.
+4. **Apply**: Generate response using the selected agent's persona and rules.
+
+### Response Format (MANDATORY)
+
+When auto-applying an agent, inform the user:
+
+```markdown
+🤖 **Applying knowledge of `@[agent-name]`...**
+
+[Continue with specialized response]
+```
+
+**Rules:**
+
+1. **Silent Analysis**: No verbose meta-commentary ("I am analyzing...").
+2. **Respect Overrides**: If user mentions `@agent`, use it.
+3. **Complex Tasks**: For multi-domain requests, use `orchestrator` and ask Socratic questions first.
+
+---
+
 ## TIER 0: UNIVERSAL RULES (Always Active)
 
 ### 🌐 Language Handling
 
 When user's prompt is NOT in English:
+
 1. **Internally translate** for better comprehension
 2. **Respond in user's language** - match their communication
 3. **Code comments/variables** remain in English
@@ -75,6 +109,7 @@ When user's prompt is NOT in English:
 ### 📁 File Dependency Awareness
 
 **Before modifying ANY file:**
+
 1. Check `CODEBASE.md` → File Dependencies
 2. Identify dependent files
 3. Update ALL affected files together
@@ -84,10 +119,10 @@ When user's prompt is NOT in English:
 > 🔴 **MANDATORY:** Read `ARCHITECTURE.md` at session start to understand Agents, Skills, and Scripts.
 
 **Path Awareness:**
+
 - Agents: `.agent/` (Project)
 - Skills: `.agent/skills/` (Project)
 - Runtime Scripts: `.agent/skills/<skill>/scripts/`
-
 
 ### 🧠 Read → Understand → Apply
 
@@ -97,6 +132,7 @@ When user's prompt is NOT in English:
 ```
 
 **Before coding, answer:**
+
 1. What is the GOAL of this agent/skill?
 2. What PRINCIPLES must I apply?
 3. How does this DIFFER from generic output?
@@ -131,7 +167,8 @@ When user's prompt is NOT in English:
 | **Full Orchestration** | Gatekeeper | **STOP** subagents until user confirms plan details |
 | **Direct "Proceed"** | Validation | **STOP** → Even if answers are given, ask 2 "Edge Case" questions |
 
-**Protocol:** 
+**Protocol:**
+
 1. **Never Assume:** If even 1% is unclear, ASK.
 2. **Handle Spec-heavy Requests:** When user gives a list (Answers 1, 2, 3...), do NOT skip the gate. Instead, ask about **Trade-offs** or **Edge Cases** (e.g., "LocalStorage confirmed, but should we handle data clearing or versioning?") before starting.
 3. **Wait:** Do NOT invoke subagents or write code until the user clears the Gate.
@@ -147,14 +184,16 @@ When user's prompt is NOT in English:
 | **Pre-Deploy** | `python .agent/scripts/checklist.py . --url <URL>` | Full Suite + Performance + E2E |
 
 **Priority Execution Order:**
+
 1. **Security** → 2. **Lint** → 3. **Schema** → 4. **Tests** → 5. **UX** → 6. **Seo** → 7. **Lighthouse/E2E**
 
 **Rules:**
+
 - **Completion:** A task is NOT finished until `checklist.py` returns success.
 - **Reporting:** If it fails, fix the **Critical** blockers first (Security/Lint).
 
-
 **Available Scripts (12 total):**
+
 | Script | Skill | When to Use |
 |--------|-------|-------------|
 | `security_scan.py` | vulnerability-scanner | Always on deploy |
@@ -181,6 +220,7 @@ When user's prompt is NOT in English:
 | **edit** | `orchestrator` | Execute. Check `{task-slug}.md` first. |
 
 **Plan Mode (4-Phase):**
+
 1. ANALYSIS → Research, questions
 2. PLANNING → `{task-slug}.md`, task breakdown
 3. SOLUTIONING → Architecture, design (NO CODE!)
@@ -200,6 +240,7 @@ When user's prompt is NOT in English:
 | Mobile UI/UX | `.agent/mobile-developer.md` |
 
 **These agents contain:**
+
 - Purple Ban (no violet/purple colors)
 - Template Ban (no standard layouts)
 - Anti-cliché rules
