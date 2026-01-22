@@ -29,63 +29,62 @@ graph TD
     E --> F
     F --> G[security-auditor + backend-specialist]
     G --> H[AUTO-INVOKE with context]
-
 ```
 
 ### 2. Agent Selection Matrix
 
 **Use this matrix to automatically select agents:**
 
-| User Intent | Keywords | Selected Agent(s) | Auto-invoke? |
-|-------------|----------|-------------------|--------------|
-| **Authentication** | "login", "auth", "signup", "password" | `security-auditor` + `backend-specialist` | ✅ YES |
-| **UI Component** | "button", "card", "layout", "style" | `frontend-specialist` | ✅ YES |
-| **Mobile UI** | "screen", "navigation", "touch", "gesture" | `mobile-developer` | ✅ YES |
-| **API Endpoint** | "endpoint", "route", "API", "POST", "GET" | `backend-specialist` | ✅ YES |
-| **Database** | "schema", "migration", "query", "table" | `database-architect` + `backend-specialist` | ✅ YES |
-| **Bug Fix** | "error", "bug", "not working", "broken" | `debugger` | ✅ YES |
-| **Test** | "test", "coverage", "unit", "e2e" | `test-engineer` | ✅ YES |
-| **Deployment** | "deploy", "production", "CI/CD", "docker" | `devops-engineer` | ✅ YES |
-| **Security Review** | "security", "vulnerability", "exploit" | `security-auditor` + `penetration-tester` | ✅ YES |
-| **Performance** | "slow", "optimize", "performance", "speed" | `performance-optimizer` | ✅ YES |
-| **New Feature** | "build", "create", "implement", "new app" | `orchestrator` → multi-agent | ⚠️ ASK FIRST |
-| **Complex Task** | Multiple domains detected | `orchestrator` → multi-agent | ⚠️ ASK FIRST |
+| User Intent         | Keywords                                   | Selected Agent(s)                           | Auto-invoke? |
+| ------------------- | ------------------------------------------ | ------------------------------------------- | ------------ |
+| **Authentication**  | "login", "auth", "signup", "password"      | `security-auditor` + `backend-specialist`   | ✅ YES       |
+| **UI Component**    | "button", "card", "layout", "style"        | `frontend-specialist`                       | ✅ YES       |
+| **Mobile UI**       | "screen", "navigation", "touch", "gesture" | `mobile-developer`                          | ✅ YES       |
+| **API Endpoint**    | "endpoint", "route", "API", "POST", "GET"  | `backend-specialist`                        | ✅ YES       |
+| **Database**        | "schema", "migration", "query", "table"    | `database-architect` + `backend-specialist` | ✅ YES       |
+| **Bug Fix**         | "error", "bug", "not working", "broken"    | `debugger`                                  | ✅ YES       |
+| **Test**            | "test", "coverage", "unit", "e2e"          | `test-engineer`                             | ✅ YES       |
+| **Deployment**      | "deploy", "production", "CI/CD", "docker"  | `devops-engineer`                           | ✅ YES       |
+| **Security Review** | "security", "vulnerability", "exploit"     | `security-auditor` + `penetration-tester`   | ✅ YES       |
+| **Performance**     | "slow", "optimize", "performance", "speed" | `performance-optimizer`                     | ✅ YES       |
+| **New Feature**     | "build", "create", "implement", "new app"  | `orchestrator` → multi-agent                | ⚠️ ASK FIRST |
+| **Complex Task**    | Multiple domains detected                  | `orchestrator` → multi-agent                | ⚠️ ASK FIRST |
 
 ### 3. Automatic Routing Protocol
 
-### TIER 0 - Automatic Analysis (ALWAYS ACTIVE)
+## TIER 0 - Automatic Analysis (ALWAYS ACTIVE)
 
 Before responding to ANY request:
 
 ```javascript
 // Pseudo-code for decision tree
 function analyzeRequest(userMessage) {
-  // 1. Classify request type
-  const requestType = classifyRequest(userMessage);
-  
-  // 2. Detect domains
-  const domains = detectDomains(userMessage);
-  
-  // 3. Determine complexity
-  const complexity = assessComplexity(domains);
-  
-  // 4. Select agent(s)
-  if (complexity === 'SIMPLE' && domains.length === 1) {
-    return selectSingleAgent(domains[0]);
-  } else if (complexity === 'MODERATE' && domains.length <= 2) {
-    return selectMultipleAgents(domains);
-  } else {
-    return 'orchestrator'; // Complex task
-  }
+    // 1. Classify request type
+    const requestType = classifyRequest(userMessage);
+
+    // 2. Detect domains
+    const domains = detectDomains(userMessage);
+
+    // 3. Determine complexity
+    const complexity = assessComplexity(domains);
+
+    // 4. Select agent(s)
+    if (complexity === "SIMPLE" && domains.length === 1) {
+        return selectSingleAgent(domains[0]);
+    } else if (complexity === "MODERATE" && domains.length <= 2) {
+        return selectMultipleAgents(domains);
+    } else {
+        return "orchestrator"; // Complex task
+    }
 }
 ```
 
-### 4. Response Format
+## 4. Response Format
 
 **When auto-selecting an agent, inform the user concisely:**
 
 ```markdown
-🤖 **Applying `@security-auditor` + `@backend-specialist` expertise...**
+🤖 **Applying knowledge of `@security-auditor` + `@backend-specialist`...**
 
 [Proceed with specialized response]
 ```
@@ -100,19 +99,19 @@ function analyzeRequest(userMessage) {
 
 ### Single-Domain Tasks (Auto-invoke Single Agent)
 
-| Domain | Patterns | Agent |
-|--------|----------|-------|
-| **Security** | auth, login, jwt, password, hash, token | `security-auditor` |
-| **Frontend** | component, react, vue, css, html, tailwind | `frontend-specialist` |
-| **Backend** | api, server, express, fastapi, node | `backend-specialist` |
-| **Mobile** | react native, flutter, ios, android, expo | `mobile-developer` |
-| **Database** | prisma, sql, mongodb, schema, migration | `database-architect` |
-| **Testing** | test, jest, vitest, playwright, cypress | `test-engineer` |
-| **DevOps** | docker, kubernetes, ci/cd, pm2, nginx | `devops-engineer` |
-| **Debug** | error, bug, crash, not working, issue | `debugger` |
-| **Performance** | slow, lag, optimize, cache, performance | `performance-optimizer` |
-| **SEO** | seo, meta, analytics, sitemap, robots | `seo-specialist` |
-| **Game** | unity, godot, phaser, game, multiplayer | `game-developer` |
+| Domain          | Patterns                                   | Agent                   |
+| --------------- | ------------------------------------------ | ----------------------- |
+| **Security**    | auth, login, jwt, password, hash, token    | `security-auditor`      |
+| **Frontend**    | component, react, vue, css, html, tailwind | `frontend-specialist`   |
+| **Backend**     | api, server, express, fastapi, node        | `backend-specialist`    |
+| **Mobile**      | react native, flutter, ios, android, expo  | `mobile-developer`      |
+| **Database**    | prisma, sql, mongodb, schema, migration    | `database-architect`    |
+| **Testing**     | test, jest, vitest, playwright, cypress    | `test-engineer`         |
+| **DevOps**      | docker, kubernetes, ci/cd, pm2, nginx      | `devops-engineer`       |
+| **Debug**       | error, bug, crash, not working, issue      | `debugger`              |
+| **Performance** | slow, lag, optimize, cache, performance    | `performance-optimizer` |
+| **SEO**         | seo, meta, analytics, sitemap, robots      | `seo-specialist`        |
+| **Game**        | unity, godot, phaser, game, multiplayer    | `game-developer`        |
 
 ### Multi-Domain Tasks (Auto-invoke Orchestrator)
 
@@ -162,14 +161,14 @@ Example: "Create a secure login system with dark mode UI"
 
 - ✅ Analyze silently
 - ✅ Inform which agent is being applied
-- ❌ Don't verbose meta-commentary
+- ❌ Avoid verbose meta-commentary
 
 ### Rule 2: Inform Agent Selection
 
 **DO inform which expertise is being applied:**
 
 ```markdown
-🤖 **Using knowledge of `@frontend-specialist`...**
+🤖 **Applying knowledge of `@frontend-specialist`...**
 
 I will create the component with the following characteristics:
 [Continue with specialized response]
@@ -311,6 +310,7 @@ Add to GEMINI.md temporarily:
 ## DEBUG: Intelligent Routing
 
 Show selection reasoning:
+
 - Detected domains: [list]
 - Selected agent: [name]
 - Reasoning: [why]
@@ -325,7 +325,7 @@ Show selection reasoning:
 ✅ Transparent communication of which expertise is being applied  
 ✅ Seamless integration with existing workflows  
 ✅ Override capability for explicit agent mentions  
-✅ Fallback to orchestrator for complex tasks  
+✅ Fallback to orchestrator for complex tasks
 
 **Result**: User gets specialist-level responses without needing to know the system architecture.
 

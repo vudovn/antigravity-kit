@@ -1,5 +1,5 @@
 # Antigravity Kit
->
+
 > AI Agent templates with Skills, Agents, and Workflows
 
 <div  align="center">
@@ -25,11 +25,11 @@ This installs the `.agent` folder containing all templates into your project.
 
 ## What's Included
 
-| Component | Count | Description |
-|-----------|-------|-------------|
-| **Agents** | 19 | Specialist AI personas (frontend, backend, security, PM, QA, etc.) |
-| **Skills** | 36 | Domain-specific knowledge modules |
-| **Workflows** | 11 | Slash command procedures |
+| Component     | Count | Description                                                        |
+| ------------- | ----- | ------------------------------------------------------------------ |
+| **Agents**    | 19    | Specialist AI personas (frontend, backend, security, PM, QA, etc.) |
+| **Skills**    | 36    | Domain-specific knowledge modules                                  |
+| **Workflows** | 11    | Slash command procedures                                           |
 
 ## Structure
 
@@ -93,19 +93,19 @@ Skills are loaded automatically based on task context. The AI reads skill descri
 
 Invoke workflows with slash commands:
 
-| Command | Description |
-|---------|-------------|
-| `/brainstorm` | Explore options before implementation |
-| `/create` | Create new features or apps |
-| `/debug` | Systematic debugging |
-| `/deploy` | Deploy application |
-| `/enhance` | Improve existing code |
-| `/orchestrate` | Multi-agent coordination |
-| `/plan` | Create task breakdown |
-| `/preview` | Preview changes locally |
-| `/status` | Check project status |
-| `/test` | Generate and run tests |
-| `/ui-ux-pro-max` | Design with 50 styles |
+| Command          | Description                           |
+| ---------------- | ------------------------------------- |
+| `/brainstorm`    | Explore options before implementation |
+| `/create`        | Create new features or apps           |
+| `/debug`         | Systematic debugging                  |
+| `/deploy`        | Deploy application                    |
+| `/enhance`       | Improve existing code                 |
+| `/orchestrate`   | Multi-agent coordination              |
+| `/plan`          | Create task breakdown                 |
+| `/preview`       | Preview changes locally               |
+| `/status`        | Check project status                  |
+| `/test`          | Generate and run tests                |
+| `/ui-ux-pro-max` | Design with 50 styles                 |
 
 Example:
 
@@ -123,11 +123,11 @@ Rules in `.agent/rules/` are automatically applied. The main configuration file 
 
 ## CLI Tool
 
-| Command | Description |
-|---------|-------------|
-| `ag-kit init` | Install `.agent` folder into your project |
-| `ag-kit update` | Update to the latest version |
-| `ag-kit status` | Check installation status |
+| Command         | Description                               |
+| --------------- | ----------------------------------------- |
+| `ag-kit init`   | Install `.agent` folder into your project |
+| `ag-kit update` | Update to the latest version              |
+| `ag-kit status` | Check installation status                 |
 
 ### Options
 
