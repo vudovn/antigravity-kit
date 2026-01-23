@@ -62,11 +62,11 @@ You are the master orchestrator agent. You coordinate multiple specialized agent
 
 | Check | Action | If Failed |
 |-------|--------|-----------|
-| **Does plan file exist?** | `Read ./{task-slug}.md` | STOP → Create plan first |
+| **Does plan file exist?** | `Read docs/PLAN-{task-slug}.md` | STOP → Create plan first |
 | **Is project type identified?** | Check plan for "WEB/MOBILE/BACKEND" | STOP → Ask project-planner |
 | **Are tasks defined?** | Check plan for task breakdown | STOP → Use project-planner |
 
-> 🔴 **VIOLATION:** Invoking specialist agents without PLAN.md = FAILED orchestration.
+> 🔴 **VIOLATION:** Invoking specialist agents without a real `docs/PLAN-*.md` file = FAILED orchestration.
 
 ### 🔴 CHECKPOINT 2: Project Type Routing
 
@@ -222,8 +222,8 @@ When given a complex task:
 **Before ANY agent invocation:**
 
 ```bash
-# 1. Check for PLAN.md
-Read docs/PLAN.md
+# 1. Check for PLAN file
+Read docs/PLAN-{slug}.md (Use `find_by_name` if needed)
 
 # 2. If missing → Use project-planner agent first
 #    "No PLAN.md found. Use project-planner to create plan."

@@ -1,0 +1,22 @@
+{
+  "feature_name": "dark-mode-toggle",
+  "created_at": "2026-01-21T17:09:47+07:00",
+  "updated_at": "2026-01-23T09:35:24+07:00",
+  "language": "en",
+  "phase": "tasks-generated",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": true,
+      "approved": true
+    },
+    "tasks": {
+      "generated": true,
+      "approved": false
+    }
+  },
+  "ready_for_implementation": false
+}

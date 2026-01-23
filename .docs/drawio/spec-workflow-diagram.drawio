@@ -1,0 +1,354 @@
+<mxfile host="65bd71144e">
+    <diagram id="spec-workflow" name="Spec-Driven Development Workflow">
+        <mxGraphModel dx="245" dy="262" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="SPEC-DRIVEN DEVELOPMENT WORKFLOW" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1a1a1a;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="20" width="800" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="start" value="💡 Idea" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="120" width="80" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="init-box" value="" style="swimlane;startSize=30;horizontal=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="80" width="200" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="init-title" value="/spec-init" style="text;html=1;strokeColor=none;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#1a1a1a;" parent="init-box" vertex="1">
+                    <mxGeometry x="25" y="5" width="150" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="init-step0" value="Step 0: Pre-Validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" parent="init-box" vertex="1">
+                    <mxGeometry x="10" y="40" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="init-check1" value="&lt; 5 words?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" parent="init-box" vertex="1">
+                    <mxGeometry x="55" y="70" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="init-fallback" value="Ambiguity Fallback" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" parent="init-box" vertex="1">
+                    <mxGeometry x="10" y="115" width="85" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="init-step1" value="Check Uniqueness" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="init-box" vertex="1">
+                    <mxGeometry x="100" y="115" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="init-step2" value="Create Directory" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="init-box" vertex="1">
+                    <mxGeometry x="10" y="150" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="init-step3" value="Read &amp; Write Templates" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="init-box" vertex="1">
+                    <mxGeometry x="10" y="180" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="init-output" value="Output:&#10;spec.json + requirements.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;fontStyle=1;" parent="init-box" vertex="1">
+                    <mxGeometry x="10" y="210" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-start-init" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#6c8ebf;" parent="1" source="start" target="init-box" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="specjson-phase1" value="" style="swimlane;startSize=25;horizontal=1;html=1;fillColor=#e6f2ff;strokeColor=#6c8ebf;rounded=1;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry x="160" y="380" width="200" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="specjson-phase1-title" value="📄 spec.json" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;" vertex="1" parent="specjson-phase1">
+                    <mxGeometry x="10" y="5" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="specjson-phase1-content" value="feature_name: &quot;feature-name&quot;&#10;created_at: &quot;ISO timestamp&quot;&#10;updated_at: &quot;ISO timestamp&quot;&#10;language: &quot;en&quot;&#10;phase: &quot;initialized&quot;&#10;approvals:&#10;  requirements: {gen: ❌, app: ❌}&#10;  design: {gen: ❌, app: ❌}&#10;  tasks: {gen: ❌, app: ❌}&#10;ready_for_implementation: false" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontFamily=Courier New;spacingLeft=5;" vertex="1" parent="specjson-phase1">
+                    <mxGeometry x="5" y="30" width="190" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="reqmd-phase1" value="" style="swimlane;startSize=25;horizontal=1;html=1;fillColor=#e6f2ff;strokeColor=#6c8ebf;rounded=1;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry x="160" y="580" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="reqmd-phase1-title" value="📄 requirements.md (empty)" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;" vertex="1" parent="reqmd-phase1">
+                    <mxGeometry x="10" y="5" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="reqmd-phase1-content" value="# Requirements Document&#10;&#10;## Project Description&#10;{{PROJECT_DESCRIPTION}}&#10;&#10;(Chỉ có mô tả, chưa có reqs)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontFamily=Courier New;spacingLeft=5;" vertex="1" parent="reqmd-phase1">
+                    <mxGeometry x="5" y="30" width="190" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="req-box" value="" style="swimlane;startSize=30;horizontal=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="80" width="200" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="req-title" value="/spec-requirements" style="text;html=1;strokeColor=none;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;fontStyle=1;fontColor=#1a1a1a;" parent="req-box" vertex="1">
+                    <mxGeometry x="10" y="5" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="req-step1" value="Load Context&#10;(spec.json, steering/*)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="req-box" vertex="1">
+                    <mxGeometry x="10" y="35" width="180" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="req-step2" value="Read EARS Guidelines" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="req-box" vertex="1">
+                    <mxGeometry x="10" y="75" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="req-step3" value="Analyze Codebase&#10;(Extension check)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;" parent="req-box" vertex="1">
+                    <mxGeometry x="10" y="105" width="180" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="req-step4" value="Generate EARS Format&#10;When/While/If/The shall" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="req-box" vertex="1">
+                    <mxGeometry x="10" y="145" width="180" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="req-step5" value="Update Metadata&#10;phase: requirements-generated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="req-box" vertex="1">
+                    <mxGeometry x="10" y="185" width="180" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="req-output" value="Output: requirements.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;fontStyle=1;" vertex="1" parent="req-box">
+                    <mxGeometry x="10" y="225" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-init-req" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#82b366;" parent="1" source="init-box" target="req-box" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-init-req-label" value="User Approve" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=2;fontColor=#666666;" parent="arrow-init-req" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint y="10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="reqmd-phase2" value="" style="swimlane;startSize=25;horizontal=1;html=1;fillColor=#e6f2ff;strokeColor=#6c8ebf;rounded=1;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="380" width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="reqmd-phase2-title" value="📄 requirements.md" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;" vertex="1" parent="reqmd-phase2">
+                    <mxGeometry x="10" y="5" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="reqmd-phase2-content" value="# Requirements Document&#10;&#10;## Introduction&#10;(Existing code analysis)&#10;&#10;## Requirements&#10;&#10;### Req 1: [Area Name]&#10;**Objective:** As a [role],&#10;I want [capability],&#10;so that [benefit]&#10;&#10;#### Acceptance Criteria&#10;1. When [event], shall [Y]&#10;2. While [state], shall [Y]&#10;3. If [trigger], shall [Y]&#10;4. The [system] shall [Y]&#10;&#10;### Req 2: [Area Name]&#10;...&#10;&#10;(Numeric IDs only!)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontFamily=Courier New;spacingLeft=5;" vertex="1" parent="reqmd-phase2">
+                    <mxGeometry x="5" y="30" width="190" height="265" as="geometry"/>
+                </mxCell>
+                <mxCell id="design-box" value="" style="swimlane;startSize=30;horizontal=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="80" width="220" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="design-title" value="/spec-design [-y]" style="text;html=1;strokeColor=none;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;fontStyle=1;fontColor=#1a1a1a;" parent="design-box" vertex="1">
+                    <mxGeometry x="20" y="5" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="design-step1" value="Load Context + Validate&#10;(-y auto-approve)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="design-box" vertex="1">
+                    <mxGeometry x="10" y="35" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="design-classify" value="Classify Feature Type" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontStyle=1;" parent="design-box" vertex="1">
+                    <mxGeometry x="10" y="70" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="design-types" value="New → Full | Extension → Light | CRUD → Minimal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=8;" vertex="1" parent="design-box">
+                    <mxGeometry x="10" y="100" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="design-discovery" value="Discovery Phase&#10;WebSearch/WebFetch&#10;→ research.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;" parent="design-box" vertex="1">
+                    <mxGeometry x="10" y="130" width="200" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="design-step3" value="Generate design.md&#10;Mermaid + TypeScript interfaces" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="design-box" vertex="1">
+                    <mxGeometry x="10" y="180" width="200" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="design-step4" value="Update Metadata&#10;phase: design-generated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="design-box" vertex="1">
+                    <mxGeometry x="10" y="220" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="design-output" value="Output: design.md + research.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;fontStyle=1;" parent="design-box" vertex="1">
+                    <mxGeometry x="10" y="255" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-req-design" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#82b366;" parent="1" source="req-box" target="design-box" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-req-design-label" value="Approve / -y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=2;fontColor=#666666;" parent="arrow-req-design" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint y="10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="designmd-content" value="" style="swimlane;startSize=25;horizontal=1;html=1;fillColor=#e6f2ff;strokeColor=#6c8ebf;rounded=1;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="400" width="220" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="designmd-title" value="📄 design.md" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;" vertex="1" parent="designmd-content">
+                    <mxGeometry x="10" y="5" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="designmd-sections" value="## Overview&#10;Purpose, Users, Impact&#10;### Goals / Non-Goals&#10;&#10;## Architecture&#10;• Existing Analysis&#10;• Pattern &amp; Boundary Map&#10;• Mermaid Diagram&#10;• Tech Stack Table&#10;&#10;## System Flows&#10;• Sequence diagrams&#10;&#10;## Requirements Traceability&#10;| Req | Components | Flows |&#10;&#10;## Components &amp; Interfaces&#10;• TypeScript interfaces&#10;• Service/API/Event contracts&#10;• State Management&#10;&#10;## Data Models&#10;Domain / Logical / Physical&#10;&#10;## Error Handling&#10;Categories &amp; Responses&#10;&#10;## Testing Strategy&#10;Unit (5+), Integration (3+)&#10;E2E (3+), Accessibility&#10;&#10;## Security &amp; Performance&#10;(Optional sections)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontFamily=Courier New;spacingLeft=5;" vertex="1" parent="designmd-content">
+                    <mxGeometry x="5" y="30" width="210" height="345" as="geometry"/>
+                </mxCell>
+                <mxCell id="researchmd-content" value="" style="swimlane;startSize=25;horizontal=1;html=1;fillColor=#fff2e6;strokeColor=#d79b00;rounded=1;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="800" width="220" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="researchmd-title" value="📄 research.md" style="text;html=1;strokeColor=none;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;" vertex="1" parent="researchmd-content">
+                    <mxGeometry x="10" y="5" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="researchmd-sections" value="## Summary&#10;Feature, Discovery Scope&#10;Key Findings (3+)&#10;&#10;## Research Log&#10;### [Topic/Question]&#10;• Context&#10;• Sources Consulted&#10;• Findings&#10;• Implications&#10;&#10;## Architecture Pattern Eval&#10;| Option | Strengths | Risks |&#10;&#10;## Design Decisions&#10;Context, Alternatives&#10;Selected, Rationale&#10;&#10;## Risks &amp; Mitigations&#10;&#10;## References" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontFamily=Courier New;spacingLeft=5;" vertex="1" parent="researchmd-content">
+                    <mxGeometry x="5" y="30" width="210" height="185" as="geometry"/>
+                </mxCell>
+                <mxCell id="tasks-box" value="" style="swimlane;startSize=30;horizontal=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="960" y="80" width="200" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="tasks-title" value="/spec-tasks [-y] [--seq]" style="text;html=1;strokeColor=none;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;fontColor=#1a1a1a;" parent="tasks-box" vertex="1">
+                    <mxGeometry x="10" y="5" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="tasks-step1" value="Load Context&#10;(all previous outputs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="tasks-box" vertex="1">
+                    <mxGeometry x="10" y="35" width="180" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tasks-validate" value="Validate Approvals?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" parent="tasks-box" vertex="1">
+                    <mxGeometry x="40" y="75" width="120" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tasks-step2" value="Generate Tasks&#10;• Map ALL requirements&#10;• 1-3h sizing, (P) markers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="tasks-box" vertex="1">
+                    <mxGeometry x="10" y="115" width="180" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="tasks-step3" value="Update Metadata&#10;phase: tasks-generated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="tasks-box" vertex="1">
+                    <mxGeometry x="10" y="165" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="tasks-output" value="Output: tasks.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;fontStyle=1;" parent="tasks-box" vertex="1">
+                    <mxGeometry x="10" y="200" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-design-tasks" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#82b366;" parent="1" source="design-box" target="tasks-box" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-design-tasks-label" value="Approve / -y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=2;fontColor=#666666;" parent="arrow-design-tasks" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint y="10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="tasksmd-content" value="" style="swimlane;startSize=25;horizontal=1;html=1;fillColor=#e6f2ff;strokeColor=#6c8ebf;rounded=1;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry x="960" y="400" width="200" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="tasksmd-title" value="📄 tasks.md" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;" vertex="1" parent="tasksmd-content">
+                    <mxGeometry x="10" y="5" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="tasksmd-sections" value="# Implementation Plan&#10;&#10;## Task Format:&#10;&#10;- [ ] 1. Major Task Name&#10;  - [ ] 1.1 Sub-task (P)&#10;    - Detail item 1&#10;    - Detail item 2&#10;    - _Requirements: 1.1, 1.2_&#10;  - [ ] 1.2 Sub-task&#10;    - ...&#10;&#10;- [ ] 2. Major Task 2&#10;  - [ ] 2.1 Sub-task (P)&#10;  - [ ] 2.2 Sub-task&#10;&#10;## Markers:&#10;• (P) = Parallel execution OK&#10;• - [ ]* = Optional/deferrable&#10;• Max 2 levels nesting&#10;• 1-3 hours per sub-task" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontFamily=Courier New;spacingLeft=5;" vertex="1" parent="tasksmd-content">
+                    <mxGeometry x="5" y="30" width="190" height="245" as="geometry"/>
+                </mxCell>
+                <mxCell id="impl-box" value="" style="swimlane;startSize=30;horizontal=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="1220" y="80" width="200" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="impl-title" value="/spec-impl &lt;task-id&gt;" style="text;html=1;strokeColor=none;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;fontColor=#1a1a1a;" parent="impl-box" vertex="1">
+                    <mxGeometry x="10" y="5" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="impl-step1" value="Load Context&#10;tasks.md, design.md, requirements.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="impl-box" vertex="1">
+                    <mxGeometry x="10" y="35" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="impl-step2" value="Parse Task(s)&#10;Single: 1.1 | Multiple: 1.1,1.2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="impl-box" vertex="1">
+                    <mxGeometry x="10" y="80" width="180" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="impl-step3" value="For Each Task:&#10;• Read design contracts&#10;• Implement code&#10;• Verify acceptance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;" parent="impl-box" vertex="1">
+                    <mxGeometry x="10" y="120" width="180" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="impl-step4" value="Update Progress&#10;Mark [x] in tasks.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;" parent="impl-box" vertex="1">
+                    <mxGeometry x="10" y="180" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="impl-output" value="Output: Code + ✅ Verification" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;fontStyle=1;" parent="impl-box" vertex="1">
+                    <mxGeometry x="10" y="215" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-tasks-impl" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#82b366;" parent="1" source="tasks-box" target="impl-box" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-tasks-impl-label" value="Clear Context!" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=2;fontColor=#b85450;" parent="arrow-tasks-impl" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint y="10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="impl-loop" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#d79b00;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1420" y="200" as="sourcePoint"/>
+                        <mxPoint x="1420" y="280" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1460" y="200"/>
+                            <mxPoint x="1460" y="280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="impl-loop-label" value="Next Task" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=2;fontColor=#d79b00;" parent="impl-loop" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint x="20" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="done" value="✅ DONE" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1480" y="195" width="80" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow-impl-done" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#82b366;" parent="1" source="impl-box" target="done" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="status-box" value="" style="swimlane;startSize=30;horizontal=1;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="1480" y="80" width="180" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="status-title" value="/spec-status" style="text;html=1;strokeColor=none;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;fontColor=#1a1a1a;" parent="status-box" vertex="1">
+                    <mxGeometry x="15" y="5" width="150" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="status-logic" value="• Read spec.json&#10;• Display phase, approvals&#10;• Recommend next action&#10;• List all specs (no args)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=9;align=left;spacingLeft=5;" parent="status-box" vertex="1">
+                    <mxGeometry x="10" y="35" width="160" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase-box" value="" style="swimlane;startSize=30;horizontal=1;html=1;fillColor=#f5f5f5;strokeColor=#666666;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1220" y="400" width="320" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase-title" value="🔄 Phase Transitions (spec.json)" style="text;html=1;strokeColor=none;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=12;fontStyle=1;fontColor=#1a1a1a;" parent="phase-box" vertex="1">
+                    <mxGeometry x="10" y="5" width="300" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase1" value="initialized" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="phase-box" vertex="1">
+                    <mxGeometry x="10" y="40" width="70" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase2" value="requirements-&#10;generated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;" parent="phase-box" vertex="1">
+                    <mxGeometry x="90" y="40" width="70" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase3" value="design-&#10;generated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;" parent="phase-box" vertex="1">
+                    <mxGeometry x="170" y="40" width="70" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase4" value="tasks-&#10;generated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;" parent="phase-box" vertex="1">
+                    <mxGeometry x="250" y="40" width="60" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase-arrow1" value="" style="endArrow=classic;html=1;strokeWidth=1;strokeColor=#666666;" parent="phase-box" source="phase1" target="phase2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase-arrow2" value="" style="endArrow=classic;html=1;strokeWidth=1;strokeColor=#666666;" parent="phase-box" source="phase2" target="phase3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase-arrow3" value="" style="endArrow=classic;html=1;strokeWidth=1;strokeColor=#666666;" parent="phase-box" source="phase3" target="phase4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="approval-info" value="approvals: {&#10;  requirements: {generated, approved}&#10;  design: {generated, approved}&#10;  tasks: {generated, approved}&#10;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontFamily=Courier New;spacingLeft=10;" parent="phase-box" vertex="1">
+                    <mxGeometry x="10" y="75" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="flag-info" value="Flags: -y (auto-approve) | --sequential (no parallel)" style="text;html=1;strokeColor=none;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=9;fontStyle=2;fontColor=#1a1a1a;" parent="phase-box" vertex="1">
+                    <mxGeometry x="10" y="145" width="300" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-box" value="" style="swimlane;startSize=25;horizontal=1;html=1;fillColor=#f5f5f5;strokeColor=#666666;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1220" y="600" width="320" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-title" value="🎨 Legend" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#1a1a1a;" parent="legend-box" vertex="1">
+                    <mxGeometry x="10" width="300" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-yellow" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" parent="legend-box" vertex="1">
+                    <mxGeometry x="10" y="30" width="20" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-yellow-text" value="Command Box" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="legend-box" vertex="1">
+                    <mxGeometry x="35" y="27" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-purple" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" parent="legend-box" vertex="1">
+                    <mxGeometry x="120" y="30" width="20" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-purple-text" value="Execution Step" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="legend-box" vertex="1">
+                    <mxGeometry x="145" y="27" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-blue" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" parent="legend-box" vertex="1">
+                    <mxGeometry x="10" y="50" width="20" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-blue-text" value="Analysis/Discovery" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="legend-box" vertex="1">
+                    <mxGeometry x="35" y="47" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-orange" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" parent="legend-box" vertex="1">
+                    <mxGeometry x="120" y="50" width="20" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-orange-text" value="Decision/Validation" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="legend-box" vertex="1">
+                    <mxGeometry x="145" y="47" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-green" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" parent="legend-box" vertex="1">
+                    <mxGeometry x="10" y="70" width="20" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-green-text" value="Output/Success" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="legend-box" vertex="1">
+                    <mxGeometry x="35" y="67" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-red" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" parent="legend-box" vertex="1">
+                    <mxGeometry x="120" y="70" width="20" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-red-text" value="Error/Fallback" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="legend-box" vertex="1">
+                    <mxGeometry x="145" y="67" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-file" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f2ff;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="legend-box">
+                    <mxGeometry x="10" y="90" width="20" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-file-text" value="File Content Box" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="legend-box">
+                    <mxGeometry x="35" y="87" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#82b366;" parent="legend-box" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="120" y="98" as="sourcePoint"/>
+                        <mxPoint x="140" y="98" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="legend-arrow-text" value="Flow (approval)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="legend-box" vertex="1">
+                    <mxGeometry x="145" y="87" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="steering-box" value="" style="swimlane;startSize=25;horizontal=1;html=1;fillColor=#f5f5f5;strokeColor=#666666;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="1220" y="800" width="320" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="steering-title" value="📁 .specs/steering/ (Project Memory)" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;fontColor=#1a1a1a;" vertex="1" parent="steering-box">
+                    <mxGeometry x="10" y="5" width="300" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="steering-content" value="├── structure.md  → Project structure rules&#10;├── tech.md       → Tech stack decisions&#10;├── product.md    → Product context&#10;└── [custom].md   → Custom steering files&#10;&#10;Loaded by ALL commands for context" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontFamily=Courier New;spacingLeft=10;" vertex="1" parent="steering-box">
+                    <mxGeometry x="10" y="30" width="300" height="85" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -13,7 +13,7 @@ $ARGUMENTS
 1. **NO CODE WRITING** - This command creates plan file only
 2. **Use project-planner agent** - NOT Claude Code's native Plan subagent
 3. **Socratic Gate** - Ask clarifying questions before planning
-4. **Dynamic Naming** - Plan file named based on task
+4. **Dynamic Naming** - Plan file named based on task in `docs/` folder
 
 ---
 
@@ -31,14 +31,14 @@ NAMING RULES:
 1. Extract 2-3 key words from request
 2. Lowercase, hyphen-separated
 3. Max 30 characters
-4. Example: "e-commerce cart" → PLAN-ecommerce-cart.md
+4. Example: "e-commerce cart" → docs/PLAN-ecommerce-cart.md
 
 RULES:
 1. Follow project-planner.md Phase -1 (Context Check)
 2. Follow project-planner.md Phase 0 (Socratic Gate)
-3. Create PLAN-{slug}.md with task breakdown
+3. Create `docs/PLAN-{slug}.md` using `write_to_file`
 4. DO NOT write any code files
-5. REPORT the exact file name created
+5. DO NOT create "artifacts" for the plan, creating rules in docs/ is better
 ```
 
 ---

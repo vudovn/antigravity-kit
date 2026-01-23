@@ -32,6 +32,7 @@ Agent activated → Check frontmatter "skills:" field
    - ✅ LOAD each skill's `SKILL.md`.
    - ✅ APPLY all rules from agent AND skills.
 2. **Forbidden:** Never skip reading agent rules or skill instructions. "Read → Understand → Apply" is mandatory.
+3. **Artifact Ban:** DO NOT create "Implementation Plan" artifacts (sidebar artifacts) unless the user EXPLICITLY asks for them. Use standard markdown files in `docs/` or text responses instead.
 
 ---
 
@@ -44,13 +45,22 @@ Agent activated → Check frontmatter "skills:" field
 | **QUESTION** | "what is", "how does", "explain" | TIER 0 only | Text Response |
 | **SURVEY/INTEL**| "analyze", "list files", "overview" | TIER 0 + Explorer | Session Intel (No File) |
 | **SIMPLE CODE** | "fix", "add", "change" (single file) | TIER 0 + TIER 1 (lite) | Inline Edit |
-| **COMPLEX CODE**| "build", "create", "implement", "refactor" | TIER 0 + TIER 1 (full) + Agent | **{task-slug}.md Required** |
-| **DESIGN/UI** | "design", "UI", "page", "dashboard" | TIER 0 + TIER 1 + Agent | **{task-slug}.md Required** |
+| **COMPLEX CODE**| "build", "create", "implement", "refactor" | TIER 0 + TIER 1 (full) + Agent | **Must create `docs/PLAN-{task-slug}.md`** |
+| **DESIGN/UI** | "design", "UI", "page", "dashboard" | TIER 0 + TIER 1 + Agent | **Must create `docs/PLAN-{task-slug}.md`** |
 | **SLASH CMD** | /create, /orchestrate, /debug | Command-specific flow | Variable |
 
 ---
 
 ## TIER 0: UNIVERSAL RULES (Always Active)
+
+### 💬 Response Format
+
+All responses must generally follow this structure:
+1. **Explanation**: Brief context/problem/solution.
+2. **Implementation**: Code/Action with clear comments.
+3. **Usage/Caveats**: (If applicable)
+4. **Next Action:** (MANDATORY) Specific proposed next step.
+   - Example: "Use `/create` to start", "Review `docs/PLAN-x.md`", "Run `pytest`".
 
 ### 🌐 Language Handling
 
@@ -67,6 +77,7 @@ When user's prompt is NOT in English:
 - No verbose explanations
 - No over-commenting
 - No over-engineering
+- **Artifact Control:** DO NOT create "Implementation Plan" artifacts (sidebar artifacts) unless the user EXPLICITLY asks for them. Use standard markdown files in `docs/` or text responses instead.
 - **Self-Documentation:** Every agent is responsible for documenting their own changes in relevant `.md` files.
 - **Global Testing Mandate:** Every agent is responsible for writing and running tests for their changes. Follow the "Testing Pyramid" (Unit > Integration > E2E) and the "AAA Pattern" (Arrange, Act, Assert).
 - **Global Performance Mandate:** "Measure first, optimize second." Every agent must ensure their changes adhere to 2025 performance standards (Core Web Vitals for Web, query optimization for DB, bundle limits for FS).
@@ -178,15 +189,16 @@ When user's prompt is NOT in English:
 |------|-------|----------|
 | **plan** | `project-planner` | 4-phase methodology. NO CODE before Phase 4. |
 | **ask** | - | Focus on understanding. Ask questions. |
-| **edit** | `orchestrator` | Execute. Check `{task-slug}.md` first. |
+| **edit** | `orchestrator` | Execute. Check `docs/PLAN-{slug}.md` file first. | |
 
 **Plan Mode (4-Phase):**
 1. ANALYSIS → Research, questions
-2. PLANNING → `{task-slug}.md`, task breakdown
+2. PLANNING → Create userspace file **`docs/PLAN-{task-slug}.md`**.
+   > 🔴 **ABSOLUTE RULE:** DO NOT create an "Artifact" or "Implementation Plan" UI element. You MUST create a real markdown file in the `docs/` directory.
 3. SOLUTIONING → Architecture, design (NO CODE!)
 4. IMPLEMENTATION → Code + tests
 
-> 🔴 **Edit mode:** If multi-file or structural change → Offer to create `{task-slug}.md`. For single-file fixes → Proceed directly.
+> 🔴 **Edit mode:** If multi-file or structural change → Offer to create `docs/PLAN-{task-slug}.md` first. For single-file fixes → Proceed directly.
 
 ---
 
