@@ -47,7 +47,8 @@ export default function WebAppExamplePage() {
                 <CodeBlock code={`/plan Create a blog application with Next.js
 
 Features needed:
-- User authentication (Clerk)
+- Prisma SQL Lite
+- User authentication
 - Post management (CRUD)
 - Categories and tags
 - Rich text editor

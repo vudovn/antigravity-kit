@@ -23,6 +23,15 @@ ag-kit init
 
 This installs the `.agent` folder containing all templates into your project.
 
+## What's Included
+
+| Component     | Count | Description                                                        |
+| ------------- | ----- | ------------------------------------------------------------------ |
+| **Agents**    | 20    | Specialist AI personas (frontend, backend, security, PM, QA, etc.) |
+| **Skills**    | 36    | Domain-specific knowledge modules                                  |
+| **Workflows** | 11    | Slash command procedures                                           |
+
+
 ## Usage
 
 ### Using Agents
@@ -43,6 +52,7 @@ AI: 🤖 Using @debugger for systematic analysis...
 **How it works:**
 
 - Analyzes your request silently
+
 - Detects domain(s) automatically (frontend, backend, security, etc.)
 - Selects the best specialist(s)
 - Informs you which expertise is being applied

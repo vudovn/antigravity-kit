@@ -453,7 +453,6 @@ const AntigravityGoogle = () => {
       </defs>
     </svg>
 
-
   );
 };
 

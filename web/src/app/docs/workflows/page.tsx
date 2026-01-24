@@ -1,20 +1,13 @@
 import { Lightbulb } from "lucide-react";
 import Link from "next/link";
+import workflowsData from "@/services/workflows.json";
 
 export default function WorkflowsPage() {
-    const workflows = [
-        { cmd: "/brainstorm", desc: "Structured brainstorming for projects and features. Explores multiple options before implementation.", usage: "/brainstorm authentication system" },
-        { cmd: "/create", desc: "Create new application command. Triggers App Builder skill and starts interactive dialogue with user.", usage: "/create landing page with hero section" },
-        { cmd: "/debug", desc: "Activates DEBUG mode for systematic problem investigation using 4-phase methodology.", usage: "/debug why login fails" },
-        { cmd: "/deploy", desc: "Deployment command for production releases. Pre-flight checks and deployment execution.", usage: "/deploy to production" },
-        { cmd: "/enhance", desc: "Add or update features in existing application. Used for iterative development.", usage: "/enhance add dark mode" },
-        { cmd: "/orchestrate", desc: "Coordinate multiple agents for complex tasks. Use for multi-perspective analysis.", usage: "/orchestrate design system audit" },
-        { cmd: "/plan", desc: "Create project plan using project-planner agent. Only generates plan file, no code.", usage: "/plan new authentication feature" },
-        { cmd: "/preview", desc: "Preview server start, stop, and status check. Local development server management.", usage: "/preview start" },
-        { cmd: "/status", desc: "Display  agent and project status. Progress tracking and status board.", usage: "/status" },
-        { cmd: "/test", desc: "Test generation and test running command. Creates and executes tests for code.", usage: "/test authentication service" },
-        { cmd: "/ui-ux-pro-max", desc: "Plan and implement UI with 50 styles, 21 palettes, 50 font pairings.", usage: "/ui-ux-pro-max design dashboard" },
-    ];
+    // Add default usage examples if not in JSON (since ARCHITECTURE.md didn't have usage)
+    const workflows = workflowsData.map(wf => ({
+        ...wf,
+        usage: wf.command + " [args]", // Simple default usage
+    }));
 
     return (
         <div className="max-w-3xl">
@@ -85,16 +78,16 @@ export default function WorkflowsPage() {
                 <div className="space-y-6">
                     {workflows.map((workflow) => (
                         <div
-                            key={workflow.cmd}
+                            key={workflow.command}
                             className="p-5 rounded-lg border border-zinc-200 dark:border-zinc-800"
                         >
                             <div className="flex items-start justify-between gap-4 mb-3">
                                 <code className="text-lg font-mono font-semibold text-zinc-900 dark:text-zinc-50">
-                                    {workflow.cmd}
+                                    {workflow.command}
                                 </code>
                             </div>
                             <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-3 leading-relaxed">
-                                {workflow.desc}
+                                {workflow.description}
                             </p>
                             <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800">
                                 <div className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-2">

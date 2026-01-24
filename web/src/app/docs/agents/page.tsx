@@ -1,85 +1,9 @@
 import Link from "next/link";
 import { Lightbulb } from "lucide-react";
+import agentsData from "@/services/agents.json";
 
 export default function AgentsPage() {
-    const agents = [
-        {
-            name: "orchestrator",
-            desc: "Multi-agent coordination and synthesis. Use when you need multiple agents working together on complex tasks."
-        },
-        {
-            name: "project-planner",
-            desc: "Discovery, Architecture, and Task Planning. Breaks down complex projects into actionable steps."
-        },
-        {
-            name: "security-auditor",
-            desc: "Master Cybersecurity (Audit + Pentest + Infra Hardening). Reviews code for security vulnerabilities."
-        },
-        {
-            name: "backend-specialist",
-            desc: "Backend Architect (API + Database + Server/Docker Deploy). Expert in API design and database architecture."
-        },
-        {
-            name: "frontend-specialist",
-            desc: "Frontend & Growth (UI/UX + SEO + Edge/Static Deploy). Builds maintainable React/Next.js systems."
-        },
-        {
-            name: "mobile-developer",
-            desc: "Mobile Specialist (Cross-platform + Mobile Performance). Expert in React Native, Flutter, and native development."
-        },
-        {
-            name: "debugger",
-            desc: "Systematic Root Cause Analysis & Bug Fixing. Uses methodical debugging approach."
-        },
-        {
-            name: "game-developer",
-            desc: "Specialized Game Logic & Assets & Performance. Expert in game development patterns."
-        },
-        {
-            name: "devops-engineer",
-            desc: "Infrastructure & CI/CD Expert (Docker + Kubernetes + GitHub Actions). Automates deployment pipelines."
-        },
-        {
-            name: "database-architect",
-            desc: "Database Design & Optimization Expert (SQL + NoSQL). Creates efficient schemas and query strategies."
-        },
-        {
-            name: "documentation-writer",
-            desc: "Technical Documentation Specialist. Creates clear API docs, README files, and developer guides."
-        },
-        {
-            name: "performance-optimizer",
-            desc: "Performance Profiling & Optimization Expert. Identifies bottlenecks and implements caching strategies."
-        },
-        {
-            name: "code-archaeologist",
-            desc: "Legacy Code Explorer & Analyzer. Understands and documents complex existing codebases."
-        },
-        {
-            name: "explorer-agent",
-            desc: "Codebase Discovery & Navigation. Finds relevant files, dependencies, and code patterns quickly."
-        },
-        {
-            name: "penetration-tester",
-            desc: "Ethical Hacking & Vulnerability Discovery. Simulates attacks to find security weaknesses."
-        },
-        {
-            name: "test-engineer",
-            desc: "Test Strategy & Implementation. Designs comprehensive testing approaches for quality assurance."
-        },
-        {
-            name: "qa-automation-engineer",
-            desc: "QA & Test Automation Specialist (Unit + Integration + E2E). Builds automated test pipelines."
-        },
-        {
-            name: "product-manager",
-            desc: "Product Strategy & Requirements. Translates business needs into technical specifications."
-        },
-        {
-            name: "seo-specialist",
-            desc: "Search Engine Optimization Expert. Improves visibility and ranking in search results."
-        },
-    ];
+    const agents = agentsData;
 
     return (
         <div className="max-w-3xl">
@@ -174,7 +98,7 @@ AI: 🤖 Using @debugger for systematic analysis...`}</code>
                                 </code>
                             </div>
                             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                                {agent.desc}
+                                {agent.description}
                             </p>
                         </div>
                     ))}

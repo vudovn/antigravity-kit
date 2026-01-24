@@ -1,0 +1,46 @@
+[
+    {
+        "command": "/brainstorm",
+        "description": "Socratic discovery"
+    },
+    {
+        "command": "/create",
+        "description": "Create new features"
+    },
+    {
+        "command": "/debug",
+        "description": "Debug issues"
+    },
+    {
+        "command": "/deploy",
+        "description": "Deploy application"
+    },
+    {
+        "command": "/enhance",
+        "description": "Improve existing code"
+    },
+    {
+        "command": "/orchestrate",
+        "description": "Multi-agent coordination"
+    },
+    {
+        "command": "/plan",
+        "description": "Task breakdown"
+    },
+    {
+        "command": "/preview",
+        "description": "Preview changes"
+    },
+    {
+        "command": "/status",
+        "description": "Check project status"
+    },
+    {
+        "command": "/test",
+        "description": "Run tests"
+    },
+    {
+        "command": "/ui-ux-pro-max",
+        "description": "Design with 50 styles"
+    }
+]

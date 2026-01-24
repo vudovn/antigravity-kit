@@ -1,0 +1,182 @@
+[
+    {
+        "name": "react-patterns",
+        "description": "React hooks, state, performance",
+        "category": "Frontend & UI"
+    },
+    {
+        "name": "nextjs-best-practices",
+        "description": "App Router, Server Components",
+        "category": "Frontend & UI"
+    },
+    {
+        "name": "tailwind-patterns",
+        "description": "Tailwind CSS v4 utilities",
+        "category": "Frontend & UI"
+    },
+    {
+        "name": "frontend-design",
+        "description": "UI/UX patterns, design systems",
+        "category": "Frontend & UI"
+    },
+    {
+        "name": "api-patterns",
+        "description": "REST, GraphQL, tRPC",
+        "category": "Backend & API"
+    },
+    {
+        "name": "nodejs-best-practices",
+        "description": "Node.js async, modules",
+        "category": "Backend & API"
+    },
+    {
+        "name": "python-patterns",
+        "description": "Python standards, FastAPI",
+        "category": "Backend & API"
+    },
+    {
+        "name": "database-design",
+        "description": "Schema design, optimization",
+        "category": "Database"
+    },
+    {
+        "name": "deployment-procedures",
+        "description": "CI/CD, deploy workflows",
+        "category": "Cloud & Infrastructure"
+    },
+    {
+        "name": "server-management",
+        "description": "Infrastructure management",
+        "category": "Cloud & Infrastructure"
+    },
+    {
+        "name": "testing-patterns",
+        "description": "Jest, Vitest, strategies",
+        "category": "Testing & Quality"
+    },
+    {
+        "name": "webapp-testing",
+        "description": "E2E, Playwright",
+        "category": "Testing & Quality"
+    },
+    {
+        "name": "tdd-workflow",
+        "description": "Test-driven development",
+        "category": "Testing & Quality"
+    },
+    {
+        "name": "code-review-checklist",
+        "description": "Code review standards",
+        "category": "Testing & Quality"
+    },
+    {
+        "name": "lint-and-validate",
+        "description": "Linting, validation",
+        "category": "Testing & Quality"
+    },
+    {
+        "name": "vulnerability-scanner",
+        "description": "Security auditing, OWASP",
+        "category": "Security"
+    },
+    {
+        "name": "red-team-tactics",
+        "description": "Offensive security",
+        "category": "Security"
+    },
+    {
+        "name": "app-builder",
+        "description": "Full-stack app scaffolding",
+        "category": "Architecture & Planning"
+    },
+    {
+        "name": "architecture",
+        "description": "System design patterns",
+        "category": "Architecture & Planning"
+    },
+    {
+        "name": "plan-writing",
+        "description": "Task planning, breakdown",
+        "category": "Architecture & Planning"
+    },
+    {
+        "name": "brainstorming",
+        "description": "Socratic questioning",
+        "category": "Architecture & Planning"
+    },
+    {
+        "name": "mobile-design",
+        "description": "Mobile UI/UX patterns",
+        "category": "Mobile"
+    },
+    {
+        "name": "game-development",
+        "description": "Game logic, mechanics",
+        "category": "Game Development"
+    },
+    {
+        "name": "seo-fundamentals",
+        "description": "SEO, E-E-A-T, Core Web Vitals",
+        "category": "SEO & Growth"
+    },
+    {
+        "name": "geo-fundamentals",
+        "description": "GenAI optimization",
+        "category": "SEO & Growth"
+    },
+    {
+        "name": "bash-linux",
+        "description": "Linux commands, scripting",
+        "category": "Shell/CLI"
+    },
+    {
+        "name": "powershell-windows",
+        "description": "Windows PowerShell",
+        "category": "Shell/CLI"
+    },
+    {
+        "name": "clean-code",
+        "description": "Coding standards (Global)",
+        "category": "Other"
+    },
+    {
+        "name": "behavioral-modes",
+        "description": "Agent personas",
+        "category": "Other"
+    },
+    {
+        "name": "parallel-agents",
+        "description": "Multi-agent patterns",
+        "category": "Other"
+    },
+    {
+        "name": "mcp-builder",
+        "description": "Model Context Protocol",
+        "category": "Other"
+    },
+    {
+        "name": "documentation-templates",
+        "description": "Doc formats",
+        "category": "Other"
+    },
+    {
+        "name": "i18n-localization",
+        "description": "Internationalization",
+        "category": "Other"
+    },
+    {
+        "name": "performance-profiling",
+        "description": "Web Vitals, optimization",
+        "category": "Other"
+    },
+    {
+        "name": "systematic-debugging",
+        "description": "Troubleshooting",
+        "category": "Other"
+    },
+    {
+        "name": "intelligent-routing",
+        "description": "Automatic agent selection and routing",
+        "category": "Other"
+    }
+]

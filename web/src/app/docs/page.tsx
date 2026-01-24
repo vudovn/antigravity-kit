@@ -1,4 +1,7 @@
 import Link from "next/link";
+import agents from '@/services/agents.json';
+import skills from '@/services/skills.json';
+import workflows from '@/services/workflows.json';
 
 export default function DocsPage() {
     return (
@@ -45,21 +48,21 @@ export default function DocsPage() {
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-3 mb-6">
                     <div className="p-6 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900">
-                        <div className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">19</div>
+                        <div className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">{agents.length}+</div>
                         <div className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Specialist Agents</div>
                         <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-2">
                             Domain experts for frontend, backend, security, and more
                         </p>
                     </div>
                     <div className="p-6 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900">
-                        <div className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">35+</div>
+                        <div className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">{skills.length}+</div>
                         <div className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Domain Skills</div>
                         <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-2">
                             Knowledge modules for React, Next.js, testing, and more
                         </p>
                     </div>
                     <div className="p-6 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900">
-                        <div className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">11</div>
+                        <div className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">{workflows.length}+</div>
                         <div className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Workflows</div>
                         <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-2">
                             Slash command procedures for common dev tasks

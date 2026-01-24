@@ -1,7 +1,34 @@
 import { Lightbulb } from "lucide-react";
 import Link from "next/link";
+import skillsData from "@/services/skills.json";
 
 export default function SkillsPage() {
+    // Group skills by category
+    const skillsByCategory = skillsData.reduce((acc, skill) => {
+        if (!acc[skill.category]) {
+            acc[skill.category] = [];
+        }
+        acc[skill.category].push(skill);
+        return acc;
+    }, {} as Record<string, typeof skillsData>);
+
+    // Order of categories to display
+    const categoryOrder = [
+        "Frontend & UI",
+        "Backend & API",
+        "Database",
+        "TypeScript/JavaScript",
+        "Cloud & Infrastructure",
+        "Testing & Quality",
+        "Security",
+        "Architecture & Planning",
+        "Mobile",
+        "Game Development",
+        "SEO & Growth",
+        "Shell/CLI",
+        "Other"
+    ];
+
     return (
         <div className="max-w-3xl">
             {/* Breadcrumb */}
@@ -80,80 +107,35 @@ export default function SkillsPage() {
                     Skill Categories
                 </h2>
                 <p className="text-base text-zinc-600 dark:text-zinc-400 mb-6">
-                    40+ skills organized by domain:
+                    {skillsData.length}+ skills organized by domain:
                 </p>
 
-                <div className="space-y-6">
-                    <div>
-                        <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-3">Frontend Development</h3>
-                        <div className="grid gap-3 sm:grid-cols-2">
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">react-patterns</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">Modern React patterns and hooks</p>
-                            </div>
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">nextjs-best-practices</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">Next.js App Router principles</p>
-                            </div>
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">tailwind-patterns</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">Tailwind CSS v4 principles</p>
-                            </div>
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">frontend-design</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">UI/UX design thinking</p>
-                            </div>
-                        </div>
-                    </div>
+                <div className="space-y-8">
+                    {categoryOrder.map((category) => {
+                        const skills = skillsByCategory[category];
+                        if (!skills) return null;
 
-                    <div>
-                        <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-3">Backend Development</h3>
-                        <div className="grid gap-3 sm:grid-cols-2">
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">api-patterns</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">API design decisions</p>
+                        return (
+                            <div key={category}>
+                                <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-4 border-b border-zinc-100 dark:border-zinc-800 pb-2 inline-block">
+                                    {category}
+                                </h3>
+                                <div className="grid gap-3 sm:grid-cols-2">
+                                    {skills.map((skill) => (
+                                        <div key={skill.name} className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors">
+                                            <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold block mb-1">
+                                                {skill.name}
+                                            </code>
+                                            <p className="text-xs text-zinc-600 dark:text-zinc-400">
+                                                {skill.description}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">database-design</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">Schema and indexing strategy</p>
-                            </div>
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">nodejs-best-practices</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">Node.js development principles</p>
-                            </div>
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">docker-expert</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">Container optimization</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-3">Quality & Testing</h3>
-                        <div className="grid gap-3 sm:grid-cols-2">
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">testing-patterns</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">Testing strategies and mocking</p>
-                            </div>
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">vulnerability-scanner</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">Security analysis</p>
-                            </div>
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">systematic-debugging</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">4-phase debugging methodology</p>
-                            </div>
-                            <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800">
-                                <code className="text-sm font-mono text-zinc-900 dark:text-zinc-50 font-semibold">clean-code</code>
-                                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">Pragmatic coding standards</p>
-                            </div>
-                        </div>
-                    </div>
+                        );
+                    })}
                 </div>
-
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-6">
-                    And 28+ more skills covering architecture, deployment, SEO, mobile, game development, and specialized tools.
-                </p>
             </section>
 
             {/* Skill Structure */}

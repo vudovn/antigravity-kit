@@ -1,0 +1,157 @@
+[
+    {
+        "name": "orchestrator",
+        "description": "Multi-agent coordination",
+        "skills": [
+            "parallel-agents",
+            "behavioral-modes"
+        ]
+    },
+    {
+        "name": "project-planner",
+        "description": "Discovery, task planning",
+        "skills": [
+            "brainstorming",
+            "plan-writing",
+            "architecture"
+        ]
+    },
+    {
+        "name": "frontend-specialist",
+        "description": "Web UI/UX",
+        "skills": [
+            "frontend-design",
+            "react-patterns",
+            "tailwind-patterns"
+        ]
+    },
+    {
+        "name": "backend-specialist",
+        "description": "API, business logic",
+        "skills": [
+            "api-patterns",
+            "nodejs-best-practices",
+            "database-design"
+        ]
+    },
+    {
+        "name": "database-architect",
+        "description": "Schema, SQL",
+        "skills": [
+            "database-design",
+            "prisma-expert"
+        ]
+    },
+    {
+        "name": "mobile-developer",
+        "description": "iOS, Android, RN",
+        "skills": [
+            "mobile-design"
+        ]
+    },
+    {
+        "name": "game-developer",
+        "description": "Game logic, mechanics",
+        "skills": [
+            "game-development"
+        ]
+    },
+    {
+        "name": "devops-engineer",
+        "description": "CI/CD, Docker",
+        "skills": [
+            "deployment-procedures",
+            "docker-expert"
+        ]
+    },
+    {
+        "name": "security-auditor",
+        "description": "Security compliance",
+        "skills": [
+            "vulnerability-scanner",
+            "red-team-tactics"
+        ]
+    },
+    {
+        "name": "penetration-tester",
+        "description": "Offensive security",
+        "skills": [
+            "red-team-tactics"
+        ]
+    },
+    {
+        "name": "test-engineer",
+        "description": "Testing strategies",
+        "skills": [
+            "testing-patterns",
+            "tdd-workflow",
+            "webapp-testing"
+        ]
+    },
+    {
+        "name": "debugger",
+        "description": "Root cause analysis",
+        "skills": [
+            "systematic-debugging"
+        ]
+    },
+    {
+        "name": "performance-optimizer",
+        "description": "Speed, Web Vitals",
+        "skills": [
+            "performance-profiling"
+        ]
+    },
+    {
+        "name": "seo-specialist",
+        "description": "Ranking, visibility",
+        "skills": [
+            "seo-fundamentals",
+            "geo-fundamentals"
+        ]
+    },
+    {
+        "name": "documentation-writer",
+        "description": "Manuals, docs",
+        "skills": [
+            "documentation-templates"
+        ]
+    },
+    {
+        "name": "product-manager",
+        "description": "Requirements, user stories",
+        "skills": [
+            "plan-writing",
+            "brainstorming"
+        ]
+    },
+    {
+        "name": "product-owner",
+        "description": "Strategy, backlog, MVP",
+        "skills": [
+            "plan-writing",
+            "brainstorming"
+        ]
+    },
+    {
+        "name": "qa-automation-engineer",
+        "description": "E2E testing, CI pipelines",
+        "skills": [
+            "webapp-testing",
+            "testing-patterns"
+        ]
+    },
+    {
+        "name": "code-archaeologist",
+        "description": "Legacy code, refactoring",
+        "skills": [
+            "clean-code",
+            "code-review-checklist"
+        ]
+    },
+    {
+        "name": "explorer-agent",
+        "description": "Codebase analysis",
+        "skills": []
+    }
+]
